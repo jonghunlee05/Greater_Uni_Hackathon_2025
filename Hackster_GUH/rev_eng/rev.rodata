@@ -1,0 +1,8 @@
+
+rev:	file format elf64-x86-64
+Contents of section .rodata:
+ 2000 01000200 00000000 00000000 00000000  ................
+ 2010 afe3a0a8 a2e3a2e2 9beba898 96e8ac99  ................
+ 2020 ed91eb80 ef9fd184 9fd6930a 0057726f  .............Wro
+ 2030 6e67206c 656e6774 680a0043 6865636b  ng length..Check
+ 2040 31206661 696c6564 0a00               1 failed..
