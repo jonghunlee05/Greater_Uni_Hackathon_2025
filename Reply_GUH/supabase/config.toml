@@ -1,0 +1,22 @@
+project_id = "riskmwojyzjptrezoobx"
+
+[functions.triage-assessment]
+verify_jwt = false
+
+[functions.resource-planning]
+verify_jwt = false
+
+[functions.first-aid-instructions]
+verify_jwt = false
+
+[functions.ambulance-chat]
+verify_jwt = false
+
+[functions.paramedic-chat]
+verify_jwt = false
+
+[functions.speech-to-text]
+verify_jwt = false
+
+[functions.structure-medical-text]
+verify_jwt = false

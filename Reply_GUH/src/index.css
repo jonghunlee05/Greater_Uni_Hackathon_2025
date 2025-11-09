@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Premium Color Palette */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Vibrant Gradient Colors */
+    --primary: 280 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 280 85% 70%;
+
+    --secondary: 230 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 199 89% 58%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 76% 46%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --critical: 0 84% 60%;
+    --critical-foreground: 0 0% 100%;
+    --critical-glow: 0 84% 70%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 280 85% 60%;
+
+    --radius: 0.75rem;
+    
+    /* Gradient Definitions */
+    --gradient-primary: linear-gradient(135deg, hsl(280 85% 60%) 0%, hsl(230 70% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(280 85% 60%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-critical: linear-gradient(135deg, hsl(0 84% 60%) 0%, hsl(280 85% 60%) 100%);
+    --gradient-surface: linear-gradient(135deg, hsl(222 47% 14%) 0%, hsl(217 33% 17%) 100%);
+    
+    /* Premium Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(280 85% 60% / 0.1);
+    --shadow-md: 0 4px 16px -4px hsl(280 85% 60% / 0.2), 0 2px 8px -2px hsl(199 89% 48% / 0.1);
+    --shadow-lg: 0 8px 32px -8px hsl(280 85% 60% / 0.3), 0 4px 16px -4px hsl(199 89% 48% / 0.2);
+    --shadow-glow: 0 0 40px hsl(280 85% 60% / 0.3), 0 0 80px hsl(199 89% 48% / 0.2);
+    
+    --chart-1: 280 85% 60%;
+    --chart-2: 142 76% 36%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 72% 51%;
+    --chart-5: 199 89% 48%;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 280 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 20%;
+    --sidebar-ring: 280 85% 60%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 280 85% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 280 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  /* Premium Gradients */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-critical {
+    background: var(--gradient-critical);
+  }
+
+  .gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Premium Shadows */
+  .shadow-premium {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-premium-lg {
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-accent {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+}

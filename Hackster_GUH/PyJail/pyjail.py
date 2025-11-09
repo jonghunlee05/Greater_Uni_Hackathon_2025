@@ -15,8 +15,7 @@ def safe_eval(code, exit):
     def fake_exit(*a):
         pass
 
-    dummy.__code__ = compile((print(open('flag.txt').read()),67)[1]
-, "<code>", "eval")
+    dummy.__code__ = compile(code, "<code>", "eval")
     sys.addaudithook(hook)
     res = dummy()
     exit = fake_exit
