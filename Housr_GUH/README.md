@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Housr GUH — Furniture Marketplace Dashboard
 
-## Project info
+Housr GUH is a responsive React + Vite + TypeScript application that showcases a premium furniture marketplace. It features a modern dashboard layout, dynamic navigation, and modular UI building blocks powered by shadcn/ui and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/12b395e2-5c8f-4525-8532-c50bf5651d6b
+## Features
+- Multi-section landing page with hero, product highlights, testimonials, and CTA blocks.
+- Responsive navigation with desktop and mobile experiences via sidebar + command palette.
+- Reusable shadcn/ui components (e.g. cards, carousel, badges, accordions) styled with Tailwind CSS.
+- Modular component structure for easy extension and future data integration.
 
-## How can I edit this code?
+## Tech Stack
+- React 18 with TypeScript
+- Vite build tooling
+- Tailwind CSS utility styling
+- shadcn/ui component library
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/12b395e2-5c8f-4525-8532-c50bf5651d6b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+## Getting Started
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
+
+# Lint the project
+npm run lint
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+The app runs on Vite’s default port (`http://localhost:5173`). Update the scripts or ports in `package.json` if needed.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
+```
+Housr_GUH/
+├── public/              # Static assets served as-is
+├── src/
+│   ├── assets/          # Images used across the UI
+│   ├── components/      # Reusable UI primitives and navigation helpers
+│   ├── hooks/           # Custom React hooks (e.g. responsive helpers)
+│   ├── pages/           # Routed views (`Index.tsx`, `NotFound.tsx`)
+│   ├── lib/             # Utility helpers
+│   └── main.tsx         # App entry point
+├── App.tsx              # Root layout composition
+├── App.css / index.css  # Global styles
+└── tailwind.config.ts   # Tailwind configuration
+```
 
-**Use GitHub Codespaces**
+## Customization Tips
+- Adjust theme colors, typography, and spacing in `tailwind.config.ts`.
+- Update navigation items in `src/components/NavLink.tsx` to reflect real routes.
+- Replace placeholder assets in `src/assets/` with production imagery.
+- Integrate data sources or APIs by wiring up fetch logic in `src/pages/Index.tsx` and converting UI components to consume live state.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contributing
+1. Create a feature branch.
+2. Commit with clear messages describing the change.
+3. Open a pull request for review.
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/12b395e2-5c8f-4525-8532-c50bf5651d6b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+For questions or improvements, reach out to the GUH 2025 team. Happy building!
