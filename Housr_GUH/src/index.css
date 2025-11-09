@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 222.2 47% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 33% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 33% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 222.2 47% 11%;
+
+    --secondary: 271 81% 56%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 142 76% 36%;
+    --accent-foreground: 222.2 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 222.2 47% 11%;
+
+    --border: 217 33% 20%;
+    --input: 217 33% 17%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    --neon-green: 142 76% 36%;
+    --neon-green-glow: 142 76% 46%;
+    --purple-accent: 271 81% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+    font-family: 'Lexend', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+  }
+
+  .gradient-home {
+    background: linear-gradient(-45deg, #0f172a, #3b0764, #0f172a, #1e293b);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+
+  .gradient-gamble {
+    background: linear-gradient(-45deg, #0f172a, #22c55e15, #3b0764, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientBG 18s ease infinite;
+  }
+
+  .gradient-auctions {
+    background: linear-gradient(-45deg, #1e293b, #3b0764, #0f172a, #3b0764);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+  }
+
+  .gradient-wallet {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #22c55e15, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientBG 16s ease infinite;
+  }
+
+  .gradient-landlord {
+    background: linear-gradient(-45deg, #3b0764, #0f172a, #1e293b, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientBG 17s ease infinite;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+}
